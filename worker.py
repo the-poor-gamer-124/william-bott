@@ -17,20 +17,19 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    input = message.content.lower()
     start = time.time()
     if message.author == client.user:
         return
-    if input.startswith("HELP"):
+    if message.content.startswith("HELP"):
         print("Help: " + str(message.channel))
         await client.send_message(message.channel, "\"line\" for Pick-up Line (PG-13)")
         await client.send_message(message.channel, "\"joke\" for Funny Joke to tell (NA)")
         client.logout()
-    if input.startswith("test"):
+    if message.content.startswith("test"):
         print("Test: " + str(message.channel))
         await client.send_message(message.channel, "Hello William")
         client.logout()
-    if input.startswith("Test"):
+    if message.content.startswith("Test"):
         print("Test: " + str(message.channel))
         await client.send_message(message.channel, "Hello William")
         client.logout()
