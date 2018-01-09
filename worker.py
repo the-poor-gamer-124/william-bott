@@ -4,7 +4,7 @@ import pickle
 import time
 
 client = discord.Client()
-
+Token = ""
 
 @client.event
 async def on_ready():
@@ -102,5 +102,5 @@ async def on_message(message):
         await client.send_message(message.channel, example[randomJoke])
         client.logout()
 
-client.run('Mzc4Njg1NDc3NzMxMTcyMzYy.DOfK3w._sMX-gdS5zao6JRBrP6BeAGJ4Fc')
-#Mzc4Njg1NDc3NzMxMTcyMzYy.DOfK3w._sMX-gdS5zao6JRBrP6BeAGJ4Fc
+client.run(Token)
+
