@@ -12,6 +12,6 @@ jokes = {1: "",
 10: ""
 }
 
-pickle_out = open("joke.pickle", "wb")
+pickle_out = open("Data/joke.pickle", "wb")
 pickle.dump(jokes, pickle_out)
 

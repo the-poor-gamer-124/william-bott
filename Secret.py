@@ -12,6 +12,6 @@ jokes = {1: "Q. What did the penis say to the condom? A:\"Cover me. I'm going in
 10: "Q: Why do elephants have four feet? A: In the animal kingdom, six inches just doesn't cut it."
 }
 
-pickle_out = open("secret.pickle", "wb")
+pickle_out = open("Data/secret.pickle", "wb")
 pickle.dump(jokes, pickle_out)
 
