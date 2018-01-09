@@ -2,9 +2,10 @@ import discord
 import random
 import pickle
 import time
+import os
 
 client = discord.Client()
-Token = ""
+Token = str(os.environ.get('Token'))
 
 @client.event
 async def on_ready():
