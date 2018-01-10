@@ -1,4 +1,4 @@
-import pickle
+import json
 
 jokes = {1: "Q. What did the penis say to the condom? A:\"Cover me. I'm going in.\"",
 2: "Q: Why doesn't Santa have any children? A: He only comes once a year -- and when he does, it's down a chimney.",
@@ -12,6 +12,6 @@ jokes = {1: "Q. What did the penis say to the condom? A:\"Cover me. I'm going in
 10: "Q: Why do elephants have four feet? A: In the animal kingdom, six inches just doesn't cut it."
 }
 
-pickle_out = open("Data/secret.pickle", "wb")
-pickle.dump(jokes, pickle_out)
+with open('secret.txt', 'w') as outfile:
+    json.dump(jokes, outfile, indent=4)
 
