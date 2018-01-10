@@ -2,7 +2,10 @@ import discord
 import random
 import pickle
 import time
+import sys
 import os
+
+sys.stdout = open('file', 'w')
 
 client = discord.Client()
 Token = str(os.environ.get('Token'))
