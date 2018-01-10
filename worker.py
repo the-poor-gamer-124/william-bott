@@ -101,7 +101,7 @@ async def on_message(message):
         with open('secret.json', 'r') as f:
             example = json.load(f)
         randomJoke = random.randint(1, 10)
-        await client.send_message(message.channel, example[randomJoke)
+        await client.send_message(message.channel, example[randomJoke])
         client.logout()
 
 client.run(Token)
