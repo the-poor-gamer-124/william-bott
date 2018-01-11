@@ -38,14 +38,16 @@ async def on_message(message):
         client.logout()
     if message.content.startswith("line"):
         print("Line: " + str(message.channel))
-        pickle_in = open("pickup.pickle", "rb")
+        with open("line.json", "r") as f:
+            example = json.load(f)
         example = pickle.load(pickle_in)
         randomQuote = random.randint(1, 22)
         await client.send_message(message.channel, example[randomQuote])
         client.logout()
     if message.content.startswith("Line"):
         print("Line: " + str(message.channel))
-        pickle_in = open("pickup.pickle", "rb")
+        with open("line.json", "r") as f:
+            example = json.load(f)
         example = pickle.load(pickle_in)
         randomQuote = random.randint(1, 22)
         await client.send_message(message.channel, example[randomQuote])
