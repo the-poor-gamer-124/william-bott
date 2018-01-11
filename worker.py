@@ -92,10 +92,10 @@ async def on_message(message):
         client.logout()
     if message.content.startswith("Secret"):
         print("Secret: " + str(message.channel))
-        pickle_in = open("secret.pickle", "rb")
-        example = pickle.load(pickle_in)
+        with open("secret.json", "r") as f:
+            example = json.load(f)
         randomJoke = random.randint(1, 10)
-        await client.send_message(message.channel, example[randomJoke])
+        await client.send_message(message.channel, example[str(randomJoke)])
         client.logout()
     if message.content.startswith("secret"):
         print("Secret: " + str(message.channel))

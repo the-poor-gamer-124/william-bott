@@ -12,6 +12,6 @@ jokes = {1: "Q. What did the penis say to the condom? A:\"Cover me. I'm going in
 10: "Q: Why do elephants have four feet? A: In the animal kingdom, six inches just doesn't cut it."
 }
 
-with open('secret.txt', 'w') as outfile:
+with open('secret.json', 'w') as outfile:
     json.dump(jokes, outfile, indent=4)
 

@@ -12,6 +12,6 @@ jokes = {1: "",
 10: ""
 }
 
-pickle_out = open("Data/joke.pickle", "wb")
-pickle.dump(jokes, pickle_out)
 
+with open('joke.json', 'w') as outfile:
+    json.dump(jokes, outfile, indent=4)
