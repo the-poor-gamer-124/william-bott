@@ -41,14 +41,14 @@ async def on_message(message):
         with open("line.json", "r") as f:
             example = json.load(f)
         randomQuote = random.randint(1, 22)
-        await client.send_message(message.channel, example[randomQuote])
+        await client.send_message(message.channel, example[str(randomQuote)])
         client.logout()
     if message.content.startswith("Line"):
         print("Line: " + str(message.channel))
         with open("line.json", "r") as f:
             example = json.load(f)
         randomQuote = random.randint(1, 22)
-        await client.send_message(message.channel, example[randomQuote])
+        await client.send_message(message.channel, example[str(randomQuote)])
         client.logout()
     if message.content.startswith("joke"):
         print("Joke: " + str(message.channel))
