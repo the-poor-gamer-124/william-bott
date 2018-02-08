@@ -29,7 +29,7 @@ async def on_message(message):
         client.logout()
     if message.content.startswith("test"):
         print("Test: " + str(message.channel))
-        await client.send_message(message.channel, "Hello \'William\'")
+        await client.send_message(message.channel, 'Hello William')
         client.logout()
     if message.content.startswith("Test"):
         print("Test: " + str(message.channel))
