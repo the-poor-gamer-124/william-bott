@@ -10,7 +10,7 @@ Token = str(os.environ.get('Token'))
 
 @client.event
 async def on_ready():
-    await client.change_status(game=discord.Game(name='say HELP'))
+    await client.change_presence(game=discord.Game(name='say HELP'))
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
