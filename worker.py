@@ -25,7 +25,7 @@ async def on_message(message):
         return
     if message.content.startswith("HELP"):
         print("Help: " + str(message.channel))
-        await client.send_message(message.channel, "\`\"line\" for Pick-up Line (PG-13)\n\"joke\" for Funny Joke to tell (NA)\`")
+        await client.send_message(message.channel, "\`\`\`\"line\" for Pick-up Line (PG-13)\n\"joke\" for Funny Joke to tell (NA)\`\`\`")
         client.logout()
     if message.content.startswith("test"):
         print("Test: " + str(message.channel))
